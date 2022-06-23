@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/money4.jpg);
+    background-repeat: no-repeat;
+}
+a{
+    color: #fbffe9;
+    text-decoration: none;
+}
+#bigBox
+{
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px 50px;
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    text-align: center;
+    background-image: linear-gradient(60deg, #0033ff 0%, #33ffff 100%);
+}
+#bigBox h1
+{
+    font-size: 40px;
+    color: midnightblue;
+}
+#bigBox .inputBox
+{
+    margin-top: 35px;
+}
+#bigBox .inputBox .inputText
+{
+    margin-top: 30px;
+}
+#bigBox .inputBox .inputText input
+{
+    border: 0;
+    padding: 5px 5px;
+    border-bottom: 1px blue;
+    background-color: #00000000;
+    color: midnightblue;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+#bigBox .inputBox .inputText i
+{
+    color: white;
+}
+#bigBox .inputBox .inputButton
+{
+    cursor: pointer;
+    border: 0;
+    width: 200px;
+    height: 50px;
+    color: snow;
+    margin-top: 55px;
+    border-radius:20px;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%,#b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    /*background-image: linear-gradient(to right, #3300ff 0%,black 100%);*/
+}
+
+#bigBox .inputBox .login{
+    color: wheat;
+}
+

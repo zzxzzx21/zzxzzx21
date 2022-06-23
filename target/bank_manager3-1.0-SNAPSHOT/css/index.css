@@ -1,0 +1,55 @@
+.picLUp{
+    height: 700px;
+
+    /*TODO: 背景图片*/
+    /*background-image: url("../pic/background/index.jpg");*/
+    background-repeat: no-repeat;
+    background-position:0 0;
+}
+
+.login-register{
+    position: relative;
+    /*float: right;*/
+    height: 392px;
+    width: 313px;
+    top: 65px;
+    right: 600px;
+    background-color: white;
+    border-radius:4px;
+}
+
+.form-line{
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.get-center{
+    text-align:center;
+}
+
+.form-size{
+    top: 200px;
+}
+
+.btn{
+    color: green;
+    width: 260px;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+
+.displayTable {
+    border: 2px solid #666;
+    width: 100%;
+    margin: 20px 0 20px 0 !important;
+
+}
+
+.colId{
+    border: 1px solid #666;
+    width: 2%;
+}
+
+
