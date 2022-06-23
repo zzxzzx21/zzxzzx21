@@ -37,7 +37,7 @@
     if (login != null && login.getId() > 0) {
         // 执行查找, 显示内容
         Connection connection = DataBaseConnector.getConnect();
-        ResultSet resultSet = OtherStuff.showSpecific(connection,
+        ResultSet resultSet = OtherStuff.getPropertyElements(connection,
                 "SELECT * FROM finance.client WHERE c_id=?", String.valueOf(login.getId()));
         if (resultSet.next()) {
             // 有数据

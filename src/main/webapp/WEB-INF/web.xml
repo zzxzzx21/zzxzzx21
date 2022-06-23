@@ -59,4 +59,12 @@
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>updateInfoServlet</servlet-name>
+        <servlet-class>com.example.bank_manager3.servlet.UpdateInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateInfoServlet</servlet-name>
+        <url-pattern>/updateInfoServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

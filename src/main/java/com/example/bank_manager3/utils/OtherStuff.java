@@ -59,7 +59,7 @@ public class OtherStuff {
             PreparedStatement preparedStatement = connection.prepareStatement(search);
             int i = 1;
             for (String keyword : keywords) {
-                preparedStatement.setString(1, keyword);
+                preparedStatement.setString(1,"%" + keyword + "%");
                 i++;
             }
             return preparedStatement.executeQuery();
@@ -97,5 +97,20 @@ public class OtherStuff {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ResultSet getPropertyElements(Connection connection, String select, String... keywords) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(select);
+            int i = 1;
+            for (String keyword : keywords) {
+                preparedStatement.setString(1, keyword);
+                i++;
+            }
+            return preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

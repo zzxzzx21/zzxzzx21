@@ -79,10 +79,12 @@ public class SellHandlerServlet extends HttpServlet {
                 }
                 // TODO 购买失败
             }
-            resp.sendRedirect(OtherStuff.HostURL + req.getContextPath() + "/NoMoney.jsp");
+//            resp.sendRedirect(OtherStuff.HostURL + req.getContextPath() + "/NoMoney.jsp");
+            req.getRequestDispatcher("NoMoney.jsp").forward(req, resp);
             return;
         } else {
-            resp.sendRedirect(OtherStuff.HostURL + req.getContextPath() + "/NoCard.jsp");
+//            resp.sendRedirect(OtherStuff.HostURL + req.getContextPath() + "/NoCard.jsp");
+            req.getRequestDispatcher("NoCard.jsp").forward(req, resp);
         }
 
     }
@@ -104,7 +106,7 @@ public class SellHandlerServlet extends HttpServlet {
     // 银行卡查询
     public List<BankCard> getUserBankCards(Connection connection, String id) {
         ResultSet resultSet = null;
-        resultSet = OtherStuff.showSpecific(connection,
+        resultSet = OtherStuff.getPropertyElements(connection,
                 "SELECT * FROM finance.bank_card WHERE bc_c_id = ?", id);
         return getBankCardRecords(resultSet);
     }
@@ -154,8 +156,8 @@ public class SellHandlerServlet extends HttpServlet {
                 int theId = getMaxId(connection) + 1;
                 OtherStuff.insert(connection, "INSERT INTO finance.property VALUES " +
                         "('" + theId + "', '" +
-                        bankCard.getBc_c_id() + "', '" + productId + "', '" + product_type + "', '" +
-                        price + "', '" + "可用', '0', '" + OtherStuff.getDate() + "')");
+                        bankCard.getBc_c_id() + "', '" + productId + "', '" + product_type + "', " +
+                        price + ", '" + "可用', '0', '" + OtherStuff.getDate() + "')");
             } else {
                 do {
                     try {

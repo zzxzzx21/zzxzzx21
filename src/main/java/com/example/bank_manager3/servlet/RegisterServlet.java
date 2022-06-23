@@ -41,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
         }
         // 查询数据库是否有重复信息
         Connection connection = DataBaseConnector.getConnect();
-        ResultSet resultSet = OtherStuff.showSpecific(connection,
+        ResultSet resultSet = OtherStuff.getPropertyElements(connection,
                 "SELECT * FROM finance.client WHERE c_id=?", id);
         try {
             if (resultSet.isBeforeFirst()) {

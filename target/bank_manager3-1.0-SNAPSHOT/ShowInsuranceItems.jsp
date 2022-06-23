@@ -30,7 +30,7 @@
   <div class='get-center'><h1>点击即可查询</h1></div>
   <%-- 显示查询结果 --%>
   <div class='get-center'>
-    <display:table name="requestScope.allStuff" class="displayTable" export="true" sort="list" pagesize="10" requestURI="">
+    <display:table name="requestScope.allStuff" class="displayTable" export="false" sort="list" pagesize="10" requestURI="">
       <display:setProperty name="paging.banner.placement" value="bottom" />
       <display:setProperty name="export.pdf" value="true" />
       <display:column class="colId" property="in_id" title="保险编号" sortable="true"/>

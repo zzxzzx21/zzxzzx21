@@ -21,9 +21,7 @@
         <h2>欢迎！</h2>
       </div>
       <%--搜索栏--%>
-      <div class="search">
-        <input type="text" name="search" placeholder="输入关键词..." />
-      </div>
+<%--      <div class="search">--%>
     </div>
     <!--sidebar navigation -->
     <div class="sidebar__nav">

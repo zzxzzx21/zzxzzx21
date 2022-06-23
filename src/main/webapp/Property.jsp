@@ -51,7 +51,7 @@
         }
         // 执行查找, 显示内容
         Connection connection = DataBaseConnector.getConnect();
-        ResultSet resultSet = OtherStuff.showSpecific(connection,
+        ResultSet resultSet = OtherStuff.getPropertyElements(connection,
                 "SELECT * FROM finance.property WHERE pr_c_id=?", String.valueOf(login.getId()));
         if (resultSet.next()) {
             // 有数据
@@ -72,7 +72,7 @@
             // 无数据
             out.print("<div class='get-center'><h1>暂时尚未持有任何资产</h1></div>");
         }
-        resultSet = OtherStuff.showSpecific(connection,
+        resultSet = OtherStuff.getPropertyElements(connection,
                 "SELECT * FROM finance.bank_card WHERE bc_c_id=?", String.valueOf(login.getId()));
         if (resultSet.next()) {
             // 有数据

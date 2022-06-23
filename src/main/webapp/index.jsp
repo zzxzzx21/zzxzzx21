@@ -30,11 +30,11 @@
                 <form action="HandleLogin" method="post">
                     <div>
 <%--                        <i class="fa fa-user-circle" style="color: beige"></i>--%>
-                        <input type="text" placeholder="请输入用户编号" name="username"/>
+                        用户名：<input type="text" placeholder="请输入用户编号" name="username"/>
                     </div>
                     <div class="inputText">
 <%--                        <i class="fa fa-key" style="color: beige"></i>--%>
-                        <input type="password" placeholder="密码" name="password"/>
+                        密码：<input type="password" placeholder="密码" name="password"/>
                     </div>
                     <input type="submit" class="inputButton" value="LOGIN"/>
                 </form>
